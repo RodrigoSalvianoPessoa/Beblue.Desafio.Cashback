@@ -13,4 +13,4 @@
 * [SQLite]
 
 ### Clone
-Run: `git clone 
+Run: `git clone https://github.com/RodrigoSalvianoPessoa/Beblue.Desafio.Cashback.git
