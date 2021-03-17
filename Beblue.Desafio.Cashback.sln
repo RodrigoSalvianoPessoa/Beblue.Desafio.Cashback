@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Beblue.Desafio.Cashback.WebApi", "Beblue.Desafio.Cashback\Beblue.Desafio.Cashback.WebApi.csproj", "{62FD8574-A47D-450F-A9BC-CD8F961D2FAE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Beblue.Desafio.Cashback.Negocio", "Beblue.Desafio.Cashback.Negocio\Beblue.Desafio.Cashback.Negocio.csproj", "{965B4987-7870-4006-B4F6-DCA4997B3FA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beblue.Desafio.Cashback.Generico", "Beblue.Desafio.Cashback.Generico\Beblue.Desafio.Cashback.Generico.csproj", "{28DDFEA9-365E-4871-A821-A58EE03F5E74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beblue.Desafio.Cashback.Generico.Negocio", "Beblue.Desafio.Cashback.Generico.Negocio\Beblue.Desafio.Cashback.Generico.Negocio.csproj", "{C94A4730-CDE0-4F2F-9CD8-F55E697F625B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62FD8574-A47D-450F-A9BC-CD8F961D2FAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62FD8574-A47D-450F-A9BC-CD8F961D2FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62FD8574-A47D-450F-A9BC-CD8F961D2FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62FD8574-A47D-450F-A9BC-CD8F961D2FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{965B4987-7870-4006-B4F6-DCA4997B3FA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{965B4987-7870-4006-B4F6-DCA4997B3FA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{965B4987-7870-4006-B4F6-DCA4997B3FA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{965B4987-7870-4006-B4F6-DCA4997B3FA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28DDFEA9-365E-4871-A821-A58EE03F5E74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28DDFEA9-365E-4871-A821-A58EE03F5E74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28DDFEA9-365E-4871-A821-A58EE03F5E74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28DDFEA9-365E-4871-A821-A58EE03F5E74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C94A4730-CDE0-4F2F-9CD8-F55E697F625B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C94A4730-CDE0-4F2F-9CD8-F55E697F625B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C94A4730-CDE0-4F2F-9CD8-F55E697F625B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C94A4730-CDE0-4F2F-9CD8-F55E697F625B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B2FA2CB9-4E65-4748-8ECA-FECFCBDFA27F}
+	EndGlobalSection
+EndGlobal
