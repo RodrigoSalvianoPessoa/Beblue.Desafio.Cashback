@@ -7,10 +7,10 @@ namespace Beblue.Desafio.Cashback.Generico.Helpers
 {
     public static class MigrationHelper
     {
-        public static void Run(string negocioDll)
+        public static void Run(string negocioDll, string connectionString)
         {
             var assembly = AssemblyHelper.GetAssemblyByName(negocioDll);
-            var serviceProvider = CreateServices(assembly);
+            var serviceProvider = CreateServices(connectionString, assembly);
 
             using (var scope = serviceProvider.CreateScope())
             {
@@ -21,11 +21,12 @@ namespace Beblue.Desafio.Cashback.Generico.Helpers
         /// <summary>
         /// Configure the dependency injection services
         /// </summary>
-        private static IServiceProvider CreateServices(Assembly assembly)
+        private static IServiceProvider CreateServices(string connectionString, Assembly assembly)
         {
             return new ServiceCollection()
                 .AddFluentMigratorCore()
                 .ConfigureRunner(rb => rb.AddSQLite()
+                    .WithGlobalConnectionString(connectionString)
                     .ScanIn(assembly).For.Migrations())
                 .AddLogging(lb => lb.AddFluentMigratorConsole())
                 .BuildServiceProvider(false);

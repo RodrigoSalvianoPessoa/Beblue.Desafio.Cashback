@@ -4,4 +4,19 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Beblue.Desafio.Cashback.Generico\Beblue.Desafio.Cashback.Generico.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migration\" />
+    <Folder Include="Service\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentMigrator" Version="3.2.15" />
+    <PackageReference Include="FluentMigrator.Runner.SQLite" Version="3.2.15" />
+    <PackageReference Include="FluentNHibernate" Version="3.1.0" />
+  </ItemGroup>
+
 </Project>

@@ -7,9 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Beblue.Desafio.Cashback.Web
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Beblue.Desafio.Cashback.Negocio", "Beblue.Desafio.Cashback.Negocio\Beblue.Desafio.Cashback.Negocio.csproj", "{965B4987-7870-4006-B4F6-DCA4997B3FA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beblue.Desafio.Cashback.Generico", "Beblue.Desafio.Cashback.Generico\Beblue.Desafio.Cashback.Generico.csproj", "{28DDFEA9-365E-4871-A821-A58EE03F5E74}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beblue.Desafio.Cashback.Generico.Negocio", "Beblue.Desafio.Cashback.Generico.Negocio\Beblue.Desafio.Cashback.Generico.Negocio.csproj", "{C94A4730-CDE0-4F2F-9CD8-F55E697F625B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Beblue.Desafio.Cashback.Generico", "Beblue.Desafio.Cashback.Generico\Beblue.Desafio.Cashback.Generico.csproj", "{28DDFEA9-365E-4871-A821-A58EE03F5E74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +27,6 @@ Global
 		{28DDFEA9-365E-4871-A821-A58EE03F5E74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28DDFEA9-365E-4871-A821-A58EE03F5E74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28DDFEA9-365E-4871-A821-A58EE03F5E74}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C94A4730-CDE0-4F2F-9CD8-F55E697F625B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C94A4730-CDE0-4F2F-9CD8-F55E697F625B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C94A4730-CDE0-4F2F-9CD8-F55E697F625B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C94A4730-CDE0-4F2F-9CD8-F55E697F625B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

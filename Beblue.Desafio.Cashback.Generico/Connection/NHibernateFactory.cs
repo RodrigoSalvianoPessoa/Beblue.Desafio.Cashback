@@ -6,61 +6,50 @@ using NHibernate;
 using NHibernate.Tool.hbm2ddl;
 using System;
 using System.Configuration;
+using System.Data.SQLite;
 
 namespace Beblue.Desafio.Cashback.Generico.Connection
 {
-    public class NHibernateFactory : IDisposable
+    public class NHibernateFactory
     {
-        private readonly ISessionFactory _sessionFactory;
-        private ISession Session { get; set; }
+        private ISessionFactory SessionFactory { get; set; }
 
-        protected NHibernateFactory(Config config, ISession session)
+        public NHibernateFactory(ConnectionConfig connectionConfig)
         {
-            Session = session;
-
-            if (config.Connection.RunMigrations)
-                MigrationHelper.Run(config.Connection.Business);
+            if (connectionConfig.RunMigrations)
+                MigrationHelper.Run(connectionConfig.Business, connectionConfig.ConnectionString);
 
             try
             {
-                var dll = AssemblyHelper.GetAssemblyByName(config.Connection.Business);
-
-                var persistenceConfigurer = GetDatabase(config.Connection.DatabaseType);
+                var dll = AssemblyHelper.GetAssemblyByName(connectionConfig.Business);
+                var persistenceConfigurer = GetDatabase(connectionConfig.DatabaseType, connectionConfig.ConnectionString);
 
                 var fluentyConfigure = Fluently.Configure()
                     .Database(persistenceConfigurer)
                     .Mappings(m => m.FluentMappings.AddFromAssembly(dll));
 
-                _sessionFactory = fluentyConfigure
+                SessionFactory = fluentyConfigure
                     .ExposeConfiguration(cfg => new SchemaExport(cfg).Execute(false, false, false))
                     .BuildConfiguration()
                     .BuildSessionFactory();
 
-                Console.WriteLine("Conexão estabelicida com sucesso!");
+                Console.WriteLine("Connection established successfully");
             }
             catch (HibernateException exception)
             {
-                throw new Exception("Erro ao estabelecer conexão com o banco de dados :", exception);
+                throw new Exception("Error when trying to establish database connection :", exception);
             }
         }
 
-        private static IPersistenceConfigurer GetDatabase(string databaseType)
+        private IPersistenceConfigurer GetDatabase(string databaseType, string connectionString)
         {
             return databaseType switch
             {
-                "sqlite" => SQLiteConfiguration.Standard.InMemory().ShowSql().FormatSql(),
-                _ => throw new ConfigurationErrorsException($"{databaseType} platform is not supported by nhibernate facility.")
+                "sqlite" => SQLiteConfiguration.Standard.ConnectionString(connectionString).ShowSql().FormatSql(),
+                _ => throw new ConfigurationErrorsException($"{databaseType} platform not supported by system.")
             };
         }
 
-        public void Dispose()
-        {
-            Session?.Dispose();
-        }
-
-        public ISession OpenSession()
-        {
-            return _sessionFactory.OpenSession();
-        }
+        public ISession OpenSession() => SessionFactory.OpenSession();
     }
 }
