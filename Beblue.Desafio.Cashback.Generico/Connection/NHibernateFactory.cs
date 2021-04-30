@@ -6,7 +6,6 @@ using NHibernate;
 using NHibernate.Tool.hbm2ddl;
 using System;
 using System.Configuration;
-using System.Data.SQLite;
 
 namespace Beblue.Desafio.Cashback.Generico.Connection
 {
